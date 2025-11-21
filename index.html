@@ -2,65 +2,239 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bliitz Child Safety Standards</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Urbanist&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Urbanist:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Urbanist', sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #1a1a1a;
-      line-height: 1.6;
+      background: #ffffff;
+      min-height: 100vh;
+      padding: 20px;
+      color: #000000;
     }
 
-    h1 {
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      color: black;
+      margin-bottom: 40px;
+      padding: 60px 20px 40px;
+    }
+
+    .header h1 {
       font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 2.5em;
-      color: #0D47A1;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      color: #1976D2;
-      margin-top: 30px;
-      margin-bottom: 10px;
-    }
-
-    p {
+      font-weight: 800;
+      font-size: 3em;
       margin-bottom: 15px;
+      letter-spacing: -1px;
     }
 
-    a {
-      color: #0D47A1;
-      text-decoration: none;
+    .header .subtitle {
+      font-family: 'Urbanist', sans-serif;
+      font-weight: 400;
+      font-size: 1.2em;
+      opacity: 0.7;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .intro-card {
+      background: rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      margin-bottom: 40px;
+      font-family: 'Urbanist', sans-serif;
+      font-weight: 500;
+      font-size: 1.1em;
+      line-height: 1.8;
+      letter-spacing: 0.5px;
+    }
+
+    .content-card {
+      background: #000000;
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+
+    .safety-section {
+      margin-bottom: 50px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .safety-section:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2em;
+      color: #ffffff;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .section-icon {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    .section-content {
+      font-family: 'Urbanist', sans-serif;
+      font-weight: 400;
+      font-size: 1.1em;
+      line-height: 1.9;
+      color: #cccccc;
     }
 
     .highlight {
-      font-weight: 700;
+      font-weight: 600;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .contact-link {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 2px solid #ffffff;
+      transition: all 0.3s ease;
+      padding-bottom: 2px;
+    }
+
+    .contact-link:hover {
+      opacity: 0.7;
+      border-bottom-color: transparent;
+    }
+
+    .footer {
+      text-align: center;
+      color: black;
+      padding: 40px 20px;
+      font-family: 'Urbanist', sans-serif;
+      font-weight: 300;
+      font-size: 0.95em;
+      opacity: 0.7;
+    }
+
+    .commitment-badge {
+      background: rgba(0, 0, 0, 0.05);
+      border: 2px solid #000000;
+      padding: 20px 30px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-top: 30px;
+      font-family: 'Urbanist', sans-serif;
+      font-weight: 600;
+      font-size: 1em;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2em;
+      }
+
+      .content-card {
+        padding: 30px 25px;
+      }
+
+      .section-title {
+        font-size: 1.6em;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Bliitz Child Safety Standards</h1>
+  <div class="container">
+    <div class="header">
+      <h1>Child Safety Standards</h1>
+      <p class="subtitle">Our Commitment to Protection</p>
+    </div>
 
-  <h2>Reporting Abuse</h2>
-  <p>Users can report child safety concerns directly in the Bliitz app using the <span class="highlight">Report Section</span>. All reports are taken seriously and reviewed promptly.</p>
+    <div class="intro-card">
+      At Bliitz, the safety of children is our highest priority. We are committed to maintaining a secure, monitored, and compliant platform that protects young users from harm.
+    </div>
 
-  <h2>Active Support</h2>
-  <p>Bliitz has an <span class="highlight">active support team</span> available to respond to any concerns or questions regarding child safety. You can contact us anytime via <a href="mailto:tech.bliitzapp@gmail.com">tech.bliitzapp@gmail.com</a>.</p>
+    <div class="content-card">
+      <div class="safety-section">
+        <h2 class="section-title">
+          <span class="section-icon">🛡️</span>
+          Reporting Abuse
+        </h2>
+        <p class="section-content">
+          Users can report child safety concerns directly in the Bliitz app using the <span class="highlight">Report Section</span>. All reports are taken seriously and reviewed promptly by our dedicated safety team to ensure swift action against any violations.
+        </p>
+      </div>
 
-  <h2>Moderation and Safety</h2>
-  <p>Bliitz actively monitors and moderates content. Any content that violates child safety policies is automatically <span class="highlight">banned</span>, and accounts that fail to comply are <span class="highlight">terminated</span> to ensure a safe environment.</p>
+      <div class="safety-section">
+        <h2 class="section-title">
+          <span class="section-icon">💬</span>
+          Active Support
+        </h2>
+        <p class="section-content">
+          Bliitz has an <span class="highlight">active support team</span> available 24/7 to respond to any concerns or questions regarding child safety. Our team is trained to handle sensitive reports with care and urgency. You can contact us anytime via <a href="mailto:tech.bliitzapp@gmail.com" class="contact-link">tech.bliitzapp@gmail.com</a>.
+        </p>
+      </div>
 
-  <h2>Compliance</h2>
-  <p>Bliitz complies with all relevant child protection laws and reports to regional or national authorities as required. We are committed to creating a safe community for all users.</p>
+      <div class="safety-section">
+        <h2 class="section-title">
+          <span class="section-icon">👁️</span>
+          Moderation and Safety
+        </h2>
+        <p class="section-content">
+          Bliitz actively monitors and moderates all content using both automated systems and human review. Any content that violates child safety policies is <span class="highlight">immediately removed</span>, and accounts that fail to comply are <span class="highlight">permanently terminated</span> to ensure a safe environment for all users.
+        </p>
+      </div>
+
+      <div class="safety-section">
+        <h2 class="section-title">
+          <span class="section-icon">⚖️</span>
+          Compliance
+        </h2>
+        <p class="section-content">
+          Bliitz complies with all relevant child protection laws including COPPA and GDPR. We work closely with regional and national authorities, reporting violations as required by law. We are committed to creating a safe, trusted community for all users.
+        </p>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <div class="commitment-badge">
+        ZERO TOLERANCE FOR CHILD EXPLOITATION
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2025 Bliitz. All rights reserved.</p>
+      <p>Protecting our community, one report at a time.</p>
+    </div>
+  </div>
 </body>
 </html>
